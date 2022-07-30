@@ -32,7 +32,11 @@ This script aims to fix this.
 
 Adding a script to `notifyrc` as event makes it possible to change settings when screen-locking begins.
 
-So after x seconds the screen will simply be forcefully turned off using `xset`.
+When the screen is locked, the script will change the screen-timeout to a custom-value in the config `~/.config/powermanagementprofilesrc` (or a default of 10s).
+
+This is done, so even after the System wakes up and activates the screens e.g. when mouse is moved, but no unlock is done, the screen begins to sleep quickly again.
+
+After a successful unlock, the value from the config is reapplied.
 
 <br>
 
@@ -40,4 +44,10 @@ So after x seconds the screen will simply be forcefully turned off using `xset`.
 
 Place the file `event_screensaver` to a bin-location, for a local user this is typically `~/.local/bin/` and make it executeable.
 
-In Settings under `Notifications > Applications > Configure > 'Screen Saver' > Configure Events...` for event `Screen locked`, enable `Run command` and add your script-location for `event_screensaver`.
+In Settings under `Notifications > Applications > Configure > 'Screen Saver' > Configure Events...` for event locked & unlocked, enable `Run command` and add your script-location for `event_screensaver` and the event triggered.
+
+Example:
+```
+Screen locked
+Run Command: ~/.local/bin/event_screenSaver locked
+```
