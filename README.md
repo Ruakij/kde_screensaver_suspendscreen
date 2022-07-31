@@ -10,7 +10,9 @@ Table of contents
 <!-- TOC -->
 - [1. The Problem](#1-the-problem)
 - [2. The Fix](#2-the-fix)
-- [3. How to install](#3-how-to-install)
+- [3. How to install/remove](#3-how-to-installremove)
+    - [3.1. Automatically](#31-automatically)
+    - [3.2. Manually](#32-manually)
 <!-- /TOC -->
 <br>
 
@@ -40,7 +42,31 @@ After a successful unlock, the value from the config is reapplied.
 
 <br>
 
-# 3. How to install
+# 3. How to install/remove
+
+## 3.1. Automatically
+
+### 3.1.1. Install
+
+Run the Makefile with `install`.
+
+```sh
+make install
+```
+
+### 3.1.2. Remove
+
+Run the Makefile with `remove`.
+
+```sh
+make remove
+```
+
+<br>
+
+## 3.2. Manually
+
+### 3.2.1. Install
 
 Place the file `event_screensaver` to a bin-location, for a local user this is typically `~/.local/bin/` and make it executeable.
 
@@ -51,3 +77,6 @@ Example:
 Screen locked
 Run Command: ~/.local/bin/event_screenSaver locked
 ```
+
+Or update/create the config-file directly under `~/.config/ksmserver.notifyrc` similary to the file found in this repository.
+Then restart or reload KWin.
