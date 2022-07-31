@@ -1,0 +1,13 @@
+[Event/locked]
+Action=Execute
+Execute=~/.local/bin/event_screensaver locked
+Logfile=
+Sound=
+TTS=
+
+[Event/unlocked]
+Action=Execute
+Execute=~/.local/bin/event_screensaver unlocked
+Logfile=
+Sound=
+TTS=
