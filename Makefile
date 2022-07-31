@@ -1,5 +1,6 @@
-KSMSERVER_NOTIFY_CONFIG_PATH=~/.config/ksmserver.notifyrc
-SCRIPT_PATH=~/.local/bin/event_screensaver
+DESTDIR=~/
+KSMSERVER_NOTIFY_CONFIG_PATH=.config/ksmserver.notifyrc
+SCRIPT_PATH=.local/bin/event_screensaver
 
 .PHONY: install remove
 default: install
