@@ -6,7 +6,7 @@ case "$1" in
   "locked")
     # Read timeout from KDE
     SCREENSAVER_TIMEOUT=$(kreadconfig5 --file powermanagementprofilesrc --group AC --group DPMSControl --key idleTime_screenSaver)
-    TIMEOUT="${NORMAL_TIMEOUT:-$SCREENSAVER_TIMEOUT_DEFAULT}"
+    TIMEOUT="${SCREENSAVER_TIMEOUT:-$SCREENSAVER_TIMEOUT_DEFAULT}"
     ;;
 
   "unlocked")
